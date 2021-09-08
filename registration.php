@@ -1,37 +1,35 @@
 <?php 
 
     include 'auth/connection.php';
-    
+
     $conn= connect();
     $m='';
     if(isset($_POST['register']))
     {
-        $first_name = $_POST['first_name'];
-        $last_Name = $_POST['last_name'];
+        $user_name = $_POST['user_name'];
         $email = $_POST['email'];
         $phone = $_POST['phone'];
-        $pass = $_POST['pass'];
-        $rPass = $_POST['r_pass'];
+        $pass = $_POST['password'];
+        $rPass = $_POST['r_password'];
         if($pass === $rPass)
         {
-            $sq= "INSERT INTO users_info(first_name, last_name, email, phone, password) VALUES('$first_name', '$last_name', '$email', '$phone', '$pass')";
+            $sq= "INSERT INTO users_info(user_name, email, phone, password) VALUES('$user_name', '$email', '$phone', '$pass')";
             if($conn->query($sq) === true)
             {
                 header('Location: login.php');
             }
             else
             {
-                $m='Connection not established!';
+                $m = 'Connection not established!';
             }
         }
         else
         {
             $m= "Passwords don't match!";
         }
-}
+    }
 
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -71,10 +69,7 @@
                                     <div class="col-md-6">
 
                                         <div class="form-group">
-                                            <input name = "first_name" type="text" class="form-control" placeholder="First Name *" value="" autocomplete="off"/>
-                                        </div>
-                                        <div class="form-group">
-                                            <input name = "last_name" type="text" class="form-control" placeholder="Last Name *" value="" autocomplete="off"/>
+                                            <input name = "user_name" type="text" class="form-control" placeholder="user name *" value="" autocomplete="off"/>
                                         </div>
                                         
                                         <div class="form-group">
