@@ -47,6 +47,8 @@
 
                     <form method="POST">
 
+                        <p style="color: red;"> <?php if($m != '') echo $m; ?> </p>
+
                         <div class="form-group">
                             <input name="uname" type="text" class="form-control" placeholder="username" value="" autocomplete="off">
                         </div>
