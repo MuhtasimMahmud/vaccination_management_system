@@ -1,4 +1,28 @@
-<?php 
+<?php
+    include 'auth/connection.php';
+
+    $conn = connect();
+
+    $m = '';
+
+    if(isset($_POST['login']))
+    {
+        $uName = $_POST['uname'];
+        $pass = $_POST['pass'];
+
+        $sql = "SELECT * FROM users_info WHERE user_name = '$uName' and password = '$pass' ";
+
+        $res = $conn->query($sql);
+
+        if(mysqli_num_rows($res) == 1)
+        {
+            header('location: dashboard.php');
+        }
+        else
+        {
+            $m = 'incorrect username or password !';
+        }
+    }
 
 ?>
 
@@ -20,18 +44,19 @@
             <div class="row">
                 <div class="col-md-6 login-form-1" style="border-radius: 10%;">
                     <h3>Login</h3>
-                    <form>
+
+                    <form method="POST">
 
                         <div class="form-group">
-                            <input name="email" type="text" class="form-control" placeholder="Your Email" value="" autocomplete="off">
+                            <input name="uname" type="text" class="form-control" placeholder="username" value="" autocomplete="off">
                         </div>
                         
                         <div class="form-group">
-                            <input name = "password" type="password" class="form-control" placeholder="Your Password" value="" >
+                            <input name = "pass" type="password" class="form-control" placeholder="Your Password" value="" >
                         </div>
                         
                         <div class="form-group" style="padding-top: 4.5%; padding-bottom: 4.5%">
-                            <input name = "submit" type="submit" class="btnSubmit" value="Login">
+                            <input name = "login" type="submit" class="btnSubmit" value="Login">
                         </div>
                         
                         <div class="form-group">
