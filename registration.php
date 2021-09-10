@@ -14,6 +14,7 @@
         if($pass === $rPass)
         {
             $sq= "INSERT INTO users_info(user_name, email, phone, password) VALUES('$user_name', '$email', '$phone', '$pass')";
+            
             if($conn->query($sq) === true)
             {
                 header('Location: login.php');
