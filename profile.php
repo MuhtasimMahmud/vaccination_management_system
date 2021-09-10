@@ -1,8 +1,8 @@
 <?php 
 
     session_start();
-    $_SESSION['user']='';
-    $_SESSION['userid'] = '';
+    // $_SESSION['user']='';
+    // $_SESSION['userid'] = '';
 
     $m = '';
 
@@ -16,11 +16,11 @@
 
 
     $user = mysqli_fetch_assoc($res);
-    $_SESSION['user'] = $user['user_name'];
-    $_SESSION['userid'] = $user['id'];
-    $_SESSION['email'] = $user['email'];
-    $_SESSION['phone'] = $user['phone'];
-    $_SESSION['password'] = $user['password'];
+    // $_SESSION['user'] = $user['user_name'];
+    // $_SESSION['userid'] = $user['id'];
+    // $_SESSION['email'] = $user['email'];
+    // $_SESSION['phone'] = $user['phone'];
+    // $_SESSION['password'] = $user['password'];
 
 
     if(isset($_POST['update']))
@@ -32,12 +32,13 @@
         $id = $user['id'];
 
 
-        if($pass == $user['pass'])
+        if($_POST['password'] == $user['pass'])
         {    
             $sq= "UPDATE users_info SET user_name = '$user_name' ,email = '$email', phone = '$phone' WHERE id = $id";
 
             if($conn->query($sq) === true)
             {
+                session_destroy();
                 header('Location: login.php');
             }
         }
@@ -79,21 +80,21 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input name = "user_name" type="text" class="form-control" placeholder="Your Name" value="<?php echo $user['user_name']; ?>"/>
+                                    <input name = "user_name" type="text" class="form-control" placeholder="Your Name" value="<?php echo $user['user_name']; ?>" autocomplete="off"/>
                                 </div>
                                 
                                 <div class="form-group">
-                                <input name = "email" type="text" class="form-control" placeholder="Your Email" value="<?php echo $user['email']; ?>"/>
+                                <input name = "email" type="text" class="form-control" placeholder="Your Email" value="<?php echo $user['email']; ?>" autocomplete="off"/>
                                 </div>
                             </div>
                             
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input name = "phone" type="text" class="form-control" placeholder="Phone" value="<?php echo $user['phone']; ?>"/>
+                                    <input name = "phone" type="text" class="form-control" placeholder="Phone" value="<?php echo $user['phone']; ?>" autocomplete="off"/>
                                 </div>
                     
                                 <div class="form-group">
-                                <input name = "password" type="text" class="form-control" placeholder="Enter Password to update" value="">
+                                <input name = "password" type="text" class="form-control" placeholder="Enter Password to update" value="" autocomplete="off">
                             </div>
                         </div>
 

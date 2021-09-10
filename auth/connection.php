@@ -7,7 +7,7 @@
         $dbname="vaccination_management_system";
 
         $conn= new mysqli($dbHost, $user, $pass, $dbname);
-        echo "connected";
+        // echo "connected"; 
         return $conn;
     }
 

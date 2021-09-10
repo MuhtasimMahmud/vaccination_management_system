@@ -30,7 +30,7 @@
                     <li><a href="profile.php">Own profile</a></li>
                     <li style="float: right;"><a href="logout.php" style="padding: 0px 20px 0px 0px;"><button class="btn btn-danger navbar-btn pull-right">Logout</button></a></li>
                     <li class="pull-right"><a href="#">Logged in as <b class="user"><?php echo $user; ?></b></a></li>
-
+ 
                 </ul>
             </div>
         </nav>

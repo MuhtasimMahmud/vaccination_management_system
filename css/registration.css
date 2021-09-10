@@ -39,7 +39,7 @@
 @keyframes mover {
     0% { transform: translateY(0); }
     100% { transform: translateY(-20px); }
-}
+} 
 .register-left p{
     font-weight: lighter;
     padding: 12%;

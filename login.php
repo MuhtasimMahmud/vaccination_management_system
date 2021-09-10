@@ -20,7 +20,7 @@
         $res = $conn->query($sql);
 
 
-        if($uName == 'admin')
+        if($uName == 'admin' and $pass == 123)
         {
             header('location: admin.php');
             $_SESSION['user'] = 'admin';

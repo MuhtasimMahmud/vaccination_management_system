@@ -14,7 +14,7 @@
             <h3><a href="dashboard.php"> HOME PAGE</a></h3>
         </div>
         <div>
-            <h1> VSCCINATED USERS </h1>
+            <h1> VACCINATED USERS </h1>
         </div>
 
         <table style="margin-left: 700px;">

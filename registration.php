@@ -28,7 +28,7 @@
         {
             $m= "Passwords don't match!";
         }
-    }
+    } 
 
 ?>
 
