@@ -32,7 +32,7 @@
         $id = $user['id'];
 
 
-        if($_POST['password'] == $user['pass'])
+        if($_POST['password'] == $user['password'])
         {    
             $sq= "UPDATE users_info SET user_name = '$user_name' ,email = '$email', phone = '$phone' WHERE id = $id";
 
@@ -64,6 +64,11 @@
     </head>
 
     <body>
+
+        <div style="margin-top: 50px; margin-left: 50px">
+                <h3><a href="dashboard.php"> HOME PAGE</a></h3>
+        </div>
+
         <div class="container register-form" style="margin-top: 150px;">
         <form method="POST" action="profile.php" enctype="multipart/form-data">
 
@@ -72,7 +77,7 @@
                         <h2 style="text-align: center; margin-bottom: 100px">Update your profile</h2>
                     </div>
 
-                    <div style="text-align: center;">
+                    <div style="text-align: center; color: red; margin-bottom: 40px">
                         <?php echo $m; ?>
                     </div>
         
@@ -94,7 +99,7 @@
                                 </div>
                     
                                 <div class="form-group">
-                                <input name = "password" type="text" class="form-control" placeholder="Enter Password to update" value="" autocomplete="off">
+                                <input name = "password" type="password" class="form-control" placeholder="Enter Password to update" value="" autocomplete="off">
                             </div>
                         </div>
 
