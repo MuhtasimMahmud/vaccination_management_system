@@ -1,4 +1,9 @@
 <?php
+
+    session_start();
+    $_SESSION['user']='';
+    $_SESSION['userid'] = '';
+
     include 'auth/connection.php';
 
     $conn = connect();
@@ -16,7 +21,12 @@
 
         if(mysqli_num_rows($res) == 1)
         {
+            $user = mysqli_fetch_assoc($res);
+            $_SESSION['user'] = $user['user_name'];
+            $_SESSION['userid'] = $user['id'];
+
             header('location: dashboard.php');
+
         }
         else
         {
