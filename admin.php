@@ -14,7 +14,7 @@
             <h3><a href="dashboard.php"> HOME PAGE</a></h3>
         </div>
         <div>
-            <h1> ALL DATA OF USERS </h1>
+            <h1> VSCCINATED USERS </h1>
         </div>
 
         <table style="margin-left: 700px;">
@@ -23,11 +23,9 @@
                 <th class="n" style="padding-right: 150px;"><h2>Email</h2></th>
                 <th class="n" style="padding-right: 150px;"><h2>Vaccine</h2></th>
             </tr>
-            <tr>
-                <td style="padding-right: 150px;"><h4>arafat202</h4></td>
-                <td style="padding-right: 150px;"><h4>arafat@gmail.com</h4></td>
-                <td style="padding-right: 150px;"><h4>none</h4></td>
-            </tr>
+
+            <p> No user is vaccinated till now!</p>
+
         </table>
 
     </body>
