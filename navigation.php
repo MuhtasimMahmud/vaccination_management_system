@@ -24,10 +24,10 @@
         <nav class="navbar navbar-inverse navbar-fixed-top" id="navbar-inverse">
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav" style="color: white;">
-                    <li><a href="#">COVID-Vaccine</a></li>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Vaccine card</a></li>
                     <li><a href="#">HelpDesk</a></li>
+                    <li><a href="profile.php">Own profile</a></li>
                     <li style="float: right;"><a href="logout.php" style="padding: 0px 20px 0px 0px;"><button class="btn btn-danger navbar-btn pull-right">Logout</button></a></li>
                     <li class="pull-right"><a href="#">Logged in as <b class="user"><?php echo $user; ?></b></a></li>
 

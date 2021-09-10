@@ -19,7 +19,13 @@
 
         $res = $conn->query($sql);
 
-        if(mysqli_num_rows($res) == 1)
+
+        if($uName == 'admin')
+        {
+            header('location: admin.php');
+            $_SESSION['user'] = 'admin';
+        }
+        else if(mysqli_num_rows($res) == 1)
         {
             $user = mysqli_fetch_assoc($res);
             $_SESSION['user'] = $user['user_name'];
@@ -30,7 +36,7 @@
         }
         else
         {
-            $m = 'incorrect username or password !';
+            $m = 'There is no account with this username !';
         }
     }
 
