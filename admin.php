@@ -23,10 +23,8 @@
                 <th class="n" style="padding-right: 150px;"><h2>Email</h2></th>
                 <th class="n" style="padding-right: 150px;"><h2>Vaccine</h2></th>
             </tr>
-
-            <p> No user is vaccinated till now!</p>
-
         </table>
+        <p style="text-align: center;"> No user is vaccinated till now!</p>
 
     </body>
 
