@@ -31,14 +31,10 @@
     background-color: #0062cc;
 }
 
-.login-form-1 .ForgetPwd{
-    color: #0062cc;
-    font-weight: 600;
-    text-decoration: none;
-}
 
-.container{
+/* .container
+{
     text-align: center;
-    margin-top: 250px;
-    margin-left: 700px;
-}
+    margin-top: 200px;
+    margin-left: 400px;
+} */

@@ -26,7 +26,7 @@
             <h1> VACCINATED USERS </h1>
         </div>
 
-        <table style="margin-left: 500px;" class="table table-dark" id="table" data-toggle="table" data-search="true" data-filter-control="true" data-show-export="true" data-click-to-select="true" data-toolbar="#toolbar">
+        <table style="margin-left: 200px;" class="table table-dark" id="table" data-toggle="table" data-search="true" data-filter-control="true" data-show-export="true" data-click-to-select="true" data-toolbar="#toolbar">
             <thead class="thead-light">
                 <tr>
                     <th style="padding-right: 200px; color:green"><h3>User</h3></th>

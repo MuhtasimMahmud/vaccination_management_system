@@ -50,7 +50,7 @@
 
     <body>
            
-        <div class="container login-container">
+        <div class="container login-container" style="margin-left: 450px; margin-top:150px">
             <div class="row">
                 <div class="col-md-6 login-form-1" style="border-radius: 10%;">
                     <h3>Login</h3>
