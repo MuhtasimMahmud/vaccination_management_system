@@ -1,5 +1,14 @@
 <?php 
 
+    session_start();
+    include('auth/connection.php');
+
+    $m = '';
+    $conn = connect();
+
+    $sql = "SELECT * from users_info";
+    $res = $conn->query($sql);
+
 ?>
 
 <html>
@@ -17,14 +26,47 @@
             <h1> VACCINATED USERS </h1>
         </div>
 
-        <table style="margin-left: 700px;">
-            <tr>
-                <th class="n" style="padding-right: 150px;"> <h2>Name</h2></th>
-                <th class="n" style="padding-right: 150px;"><h2>Email</h2></th>
-                <th class="n" style="padding-right: 150px;"><h2>Vaccine</h2></th>
-            </tr>
+        <table style="margin-left: 500px;" class="table table-dark" id="table" data-toggle="table" data-search="true" data-filter-control="true" data-show-export="true" data-click-to-select="true" data-toolbar="#toolbar">
+            <thead class="thead-light">
+                <tr>
+                    <th style="padding-right: 200px; color:green"><h3>User</h3></th>
+                    <th style="padding-right: 200px; color:green"> <h3>Email</h3></th>
+                    <th style="padding-right: 200px; color:green"><h3>Vaccinated</h3></th>
+                    <th style="padding-right: 200px; color:green"><h3>Account_Creation_Time</h3></th>
+                </tr>
+            </thead>
+            <tbody>
+            <?php
+            if(mysqli_num_rows($res)>0) 
+            {
+                while ($row = mysqli_fetch_assoc($res)) 
+                {
+
+                    echo '<tr>';
+                    if($row['user_name'] != 'admin')
+                    {
+                        echo '<td>'. $row['user_name'].'</td>';
+                        echo '<td>'. $row['email'].'</td>';
+                        if($row['is_vaccinated'] == 0)
+                        {
+                            echo '<td>'. "No".'</td>';
+                        }
+                        else
+                        {
+                            echo '<td>'. "YES".'</td>';
+                        }
+                        echo '<td>'. $row['created_at'].'</td>';
+                        echo '</tr>';
+                    }
+
+                }
+            }
+            ?>
+
+            </tbody>
         </table>
-        <p style="text-align: center;"> No user is vaccinated till now!</p>
+
+
 
     </body>
 
