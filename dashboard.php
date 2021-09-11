@@ -12,6 +12,16 @@
 
         <link rel="stylesheet" type="text/css" href="css/dashboard.css">
 
+        <!-- <style>
+			body
+				{
+					background-image: url('https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y29yb25hfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80');	
+					background-repeat: no-repeat;
+					background-attachment: fixed;
+					background-size: 100px 300px;
+				}
+		</style> -->
+
     </head>
 
 
