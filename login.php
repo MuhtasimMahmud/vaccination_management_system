@@ -20,12 +20,12 @@
         $res = $conn->query($sql);
 
 
-        if($uName == 'admin' and $pass == 123)
-        {
-            header('location: admin.php');
-            $_SESSION['user'] = 'admin';
-        }
-        else if(mysqli_num_rows($res) == 1)
+        // if($uName == 'admin' and $pass == 123)
+        // {
+        //     header('location: dashboard.php');
+        //     $_SESSION['user'] = 'admin';
+        // }
+        if(mysqli_num_rows($res) == 1)
         {
             $user = mysqli_fetch_assoc($res);
             $_SESSION['user'] = $user['user_name'];

@@ -1,26 +1,19 @@
 <?php 
 
     session_start();
-    // $_SESSION['user']='';
-    // $_SESSION['userid'] = '';
-
-    $m = '';
-
     include('auth/connection.php');
 
+    $m = '';
     $conn = connect();
 
+    $id = $_SESSION['userid'];
 
-    $sql = "SELECT * from users_info";
+
+    $sql = "SELECT * from users_info WHERE id='$id'";
     $res = $conn->query($sql);
 
 
     $user = mysqli_fetch_assoc($res);
-    // $_SESSION['user'] = $user['user_name'];
-    // $_SESSION['userid'] = $user['id'];
-    // $_SESSION['email'] = $user['email'];
-    // $_SESSION['phone'] = $user['phone'];
-    // $_SESSION['password'] = $user['password'];
 
 
     if(isset($_POST['update']))
