@@ -3,7 +3,7 @@
     // session_start();
     
     $user= $_SESSION['user'];
-    $userid= $_SESSION['userid'];
+    $userid= $_SESSION['userid']; 
 ?>
 
 

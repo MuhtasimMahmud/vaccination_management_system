@@ -32,7 +32,7 @@
             if($conn->query($sq) === true)
             {
                 session_destroy();
-                header('Location: login.php');
+                header('Location: login.php'); 
             }
         }
         else

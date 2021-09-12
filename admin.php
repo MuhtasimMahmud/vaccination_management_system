@@ -7,10 +7,10 @@
     $conn = connect();
 
     $sql = "SELECT * from users_info";
-    $res = $conn->query($sql);
+    $res = $conn->query($sql); 
 
 ?>
-
+ 
 <html>
     <head>
         <title> Admin Page</title>

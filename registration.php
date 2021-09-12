@@ -9,7 +9,7 @@
         $user_name = $_POST['user_name'];
         $email = $_POST['email'];
         $phone = $_POST['phone'];
-        $pass = $_POST['password'];
+        $pass = $_POST['password']; 
         $rPass = $_POST['r_password'];
         if($pass === $rPass)
         {

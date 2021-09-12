@@ -18,7 +18,7 @@
         $sql = "SELECT * FROM users_info WHERE user_name = '$uName' and password = '$pass' ";
 
         $res = $conn->query($sql);
-
+ 
         if(mysqli_num_rows($res) == 1)
         {
             $user = mysqli_fetch_assoc($res);
