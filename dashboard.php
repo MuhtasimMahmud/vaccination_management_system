@@ -29,15 +29,15 @@
 
         <div>
             <div class="buttons">
-                <button class = "bt" type="submit"> <b>Booking For vaccine</b> </button>
+                <a href="#"><button class = "bt" type="submit"> <b>Booking For vaccine</b> </button></a>
             </div>
 
             <div class="buttons">
-                <button class = "bt" type="submit"> <b> Status </b></button>
+                <a href="#"> <button class = "bt" type="submit"> <b> Vaccine Status </b></button> </a>
             </div>
 
             <div class="buttons">
-                <button class = "bt" type="submit"><b> Vaccine card </b></button>
+                <a href="#"><button class = "bt" type="submit"><b> Vaccine card </b></button></a>
             </div>
         </div>
 
